@@ -1,3 +1,8 @@
+                                                // LISTA DE EXERCICIOS – Printf e Scanf
+
+/*1. Faça um programa que receba dois números e ao final mostre a soma, subtração, 
+multiplicação e a divisão dos números lidos.*/
+
 # include <locale.h>
 # include <stdlib.h>
 # include <stdio.h>
