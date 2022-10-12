@@ -1,3 +1,40 @@
+                                                // LISTA DE EXERCICIOS – Printf e Scanf
+
+/*1. Faça um programa que receba dois números e ao final mostre a soma, subtração, 
+multiplicação e a divisão dos números lidos.*/
+
+# include <locale.h>
+# include <stdlib.h>
+# include <stdio.h>
+
+int main (){
+
+    setlocale (LC_ALL, "Portuguese");
+
+    float num1;
+    float num2;
+
+    printf ("Digite o Primeiro Número: ");
+    scanf ("%f", &num1);
+    printf ("Digite o Segundo Número: ");
+    scanf ("%f", &num2);
+    printf ("\nA soma de (%.2f + %.2f) foi de: %.2f", num1, num2, num1+num2);
+    printf ("\nA Subtração de (%.2f - %.2f) foi de: %.2f", num1, num2, num1-num2);
+    printf ("\nA Multiplicação de (%.2f X %.2f foi de: %.2f", num1, num2, num1*num2);
+    if (num2 == 0){
+        printf ("\nImpossivel Dividir por 0 !!");
+    }
+    else{
+        printf ("\nA Divisão será de (%.2f / %.2f) foi de: %.2f", num1, num2, num1/num2);
+    }
+    printf ("\n\n");
+    return 0;
+}
+
+/*
+2. Escreva um programa que solicite ao usuário um numero e apresente na tela o seu 
+antecessor e sucessor.
+*/
 
 # include <stdlib.h>
 # include <stdio.h>
@@ -7,26 +44,70 @@ int main(){
 
     setlocale (LC_ALL, "Portuguese");
 
-    int num;
-    int sucessor;
-    int antecessor;
+    int numero=0;
+    int sucessor=0;
+    int antecessor=0;
 
     printf ("Digite um Número para saber o Sucessor e o Antecessor: ");
     scanf ("%i", &numero);
-    sucessor=+;
-    antecessor=-;
+    sucessor = numero + 1;
+    antecessor = numero - 1;
     printf ("\nO Sucessor do Número é: %i e o Antecessor é: %i\n", sucessor, antecessor);
 }
-
-
 
 /*
 3. Elaborar um programa para determinar o consumo médio de um automóvel sendo 
 fornecida a distância total percorrida pelo automóvel e o total de combustível gasto. 
-4. Ler o raio de um circulo e informar o sua área (área = pi x r2). 
+*/
+
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+
+int main(){
+
+    setlocale (LC_ALL, "Portuguese");
+
+    int litros;
+    float distancia;
+    float consumoMedio;
+
+    printf ("Digite a quantidade de Litros que foram abastecidas: ");
+    scanf ("%i", &litros);
+    printf ("Digite a distância que o autómovel percorreu: ");
+    scanf ("%f", &distancia);
+    consumoMedio = distancia / litros;
+    printf ("\nO Consumo Médio do Veiculo foi de: %.2f Km/L\n", consumoMedio);
+}
+    
+/*
+4. Ler o raio de um circulo e informar a sua área (área = pi x r2). 
+*/
+
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+
+int main(){
+
+    const float PI = 3.1415;
+
+    setlocale (LC_ALL, "Portuguese");
+
+    int raio;
+    float area;
+
+    printf ("Digite o Raio do Circulo: ");
+    scanf ("%i", &raio);
+    area = (PI * (raio * raio));
+    printf ("\nA Área será de: %.2f\n\n", area);
+}
+
+/*
 5. Faça um programa que leia a idade de uma pessoa expressa em anos, meses e dias e 
 escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e 
 mês com 30 dias.
+*/
 6. Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
 A fórmula de conversão é F=(9*C+160)/5. 
 7. Elaborar um programa que efetue a conversão de um valor em real (R$) para dólar 
