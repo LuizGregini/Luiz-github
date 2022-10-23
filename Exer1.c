@@ -108,16 +108,137 @@ int main(){
 escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e 
 mês com 30 dias.
 */
+
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+
+int main(){
+
+    setlocale (LC_ALL, "Portuguese");
+
+    int diasDeVida;
+    int anos;
+    int meses;
+    int dia;
+    printf ("Digite a sua idade em anos: ");
+    scanf ("%i", &anos);
+    printf ("Digite quantos Meses de vida você tem: ");
+    scanf ("%i", &meses);
+    printf ("Digite quantos dias de vida você tem:");
+    scanf ("%i", &dia);
+    diasDeVida = ((anos * 365) + (meses * 30) + (dia * 1));
+    printf ("\nVocê tem %i dias de Vida!!\n\n", diasDeVida);
+}
+
+/*
 6. Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
 A fórmula de conversão é F=(9*C+160)/5. 
+*/
+
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+
+int main(){
+
+    setlocale (LC_ALL, "Portuguese");
+
+    float celsius;
+    float fahrenheit;
+
+    printf ("Digite a Temperatura em Graus Celsius: ");
+    scanf ("%f", &celsius);
+    fahrenheit = (9 * celsius + 160) / 5;
+    printf ("\nA Conversão de %.1fºC para Fahrenheit será de: %.2fºF\n\n", celsius, fahrenheit);
+}
+
+/*
 7. Elaborar um programa que efetue a conversão de um valor em real (R$) para dólar 
-(US$). Solicite ao usuário o valor em reais e a cotação atual do dólar. 
+(US$). Solicite ao usuário o valor em reais e a cotação atual do dólar.
+*/
+
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+
+int main(){
+
+    setlocale (LC_ALL, "Portuguese");
+
+    float real;
+    float dolar;
+    float cotacao;
+
+    printf ("***Conversão de R$ para US$***\n\n");
+    printf ("Digite o valor em Real: R$ ");
+    scanf ("%f", &real);
+    printf ("Digite a Cotação do Dólar: ");
+    scanf ("%f", &dolar);
+    cotacao = (real / dolar) ;
+    printf ("\nCom R$ %.2f reais você conseguira US$ %.2f Dólar !!\n\n", real, cotacao);
+}
+
+/*
 8. Crie um programa que realize o calculo do IMC (índice de massa corpórea), solicitando 
 ao usuário seu peso e altura.
 IMC = peso / altura2
+*/
+
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+
+int main(){
+
+    setlocale (LC_ALL, "Portuguese");
+
+    float altura;
+    float peso;
+    float imc;
+
+    printf ("*** Calculo IMC ***\n\n");
+    printf ("Digite a sua Altura: ");
+    scanf ("%f", &altura);
+    printf ("Digite o seu Peso: ");
+    scanf ("%f", &peso);
+    imc = peso / (altura * altura); // Você pdoe inserir o calculo do IMC no final do print;
+    printf ("\nO seu IMC será de: %.2f\n\n", imc);
+}
+
+/*
 9. Escreva um programa para ler o número total de eleitores de um município, o número 
 de votos brancos, nulos e válidos. Calcular e escrever o percentual que cada um 
 representa em relação ao total de eleitores.
+*/
+
+# include <stdlib.h>
+# include <stdio.h>
+# include <locale.h>
+
+int main(){
+
+    setlocale (LC_ALL, "Portuguese");
+
+    int numTotal;
+    int votosBranco;
+    int votosNulo;
+    int votosValidos;
+
+    printf ("Digite o Número Toral de Eleitores do Município: ");
+    scanf ("%i", &numTotal);
+    printf ("Quantas Pessoas votaram em Branco: ");
+    scanf ("%i", &votosBranco);
+    printf ("Quantas Pessoas votaram Nulo: ");
+    scanf ("%i", &votosNulo);
+    printf ("Digite quantos votos foram Validados: ");
+    scanf ("%i", &votosValidos);
+    printf ("A Porcentagem de Votos em Branco foi de: %iº/.", votosBranco / numTotal);
+    printf ("A Porcentagem de Votos Válidos foi de: %iº/.", votosNulo / numTotal);
+    printf ("A Porcentagem de Votos Válidos foi de: %iº/.", votosValidos / numTotal);
+}
+
+/*
 10. Crie um programa que realize e mostre na tela o resultado do calculo da área de um 
 trapézio, solicitando ao usuário as medidas da base maior, base menor e altura.
 11. Faça um programa que leia 3 notas e calcule a média final deste aluno. Considerar que 
